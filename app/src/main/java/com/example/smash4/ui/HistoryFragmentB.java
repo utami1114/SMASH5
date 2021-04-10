@@ -1,25 +1,25 @@
-package com.example.smash4.ui.history;
+package com.example.smash4.ui;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import com.example.smash4.MyItemRecyclerViewAdapter;
 import com.example.smash4.R;
 import com.example.smash4.dummy.DummyContent;
+import com.example.smash4.ui.history.HistoryFragment;
+import com.example.smash4.ui.history.HistoryViewModel;
 
-/**
- * A fragment representing a list of Items.
- */
-public class HistoryFragment extends Fragment {
+public class HistoryFragmentB extends Fragment {
+
+    private com.example.smash4.ui.history.HistoryViewModel HistoryViewModel;
 
     // TODO: Customize parameter argument names
     private static final String ARG_COLUMN_COUNT = "column-count";
@@ -30,7 +30,7 @@ public class HistoryFragment extends Fragment {
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
      */
-    public HistoryFragment() {
+    public HistoryFragmentB() {
     }
 
     // TODO: Customize parameter initialization
@@ -55,7 +55,7 @@ public class HistoryFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_item_list, container, false);
+        View view = inflater.inflate(R.layout.fragment_history, container, false);
 
         // Set the adapter
         if (view instanceof RecyclerView) {
@@ -71,3 +71,4 @@ public class HistoryFragment extends Fragment {
         return view;
     }
 }
+
