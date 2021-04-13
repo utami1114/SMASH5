@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".ui.camera.CameraFragment">
 
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/CameraFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CameraFragment"/>
+
+
     <Button
         android:id="@+id/cameraButton"
         android:layout_width="wrap_content"
