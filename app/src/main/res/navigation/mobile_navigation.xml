@@ -19,7 +19,7 @@
         android:id="@+id/navigation_history"
         android:name="com.example.smash4.ui.history.HistoryFragment"
         android:label="@string/history"
-        tools:layout="@layout/fragment_item_list" />
+        tools:layout="@layout/fragment_history" />
 
     <fragment
         android:id="@+id/navigation_menu"
@@ -40,6 +40,6 @@
         android:id="@+id/itemFragment"
         android:name="com.example.smash4.ui.history.HistoryFragment"
         android:label="fragment_item_list"
-        tools:layout="@layout/fragment_item_list" />
+        tools:layout="@layout/fragment_history" />
 
 </navigation>

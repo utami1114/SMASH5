@@ -3,6 +3,8 @@ package com.example.smash4;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -23,9 +25,11 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MapFragment extends Fragment {
 
 
-
-
-
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        MainActivity activity = (MainActivity) getActivity();
+    }
 
     private OnMapReadyCallback callback = new OnMapReadyCallback() {
 
@@ -63,4 +67,20 @@ public class MapFragment extends Fragment {
             mapFragment.getMapAsync(callback);
         }
     }
+
+
+    // 表示させるFragmentを切り替えるメソッドを定義（表示したいFragmentを引数として渡す）
+    private void replaceFragment(Fragment fragment) {
+        // フラグメントマネージャーの取得
+        FragmentManager manager = getFragmentManager(); // アクティビティではgetSupportFragmentManager()?
+        // フラグメントトランザクションの開始
+        FragmentTransaction transaction = manager.beginTransaction();
+        // レイアウトをfragmentに置き換え（追加）
+        transaction.replace(R.id.navigation_camera, fragment);
+        // 置き換えのトランザクションをバックスタックに保存する
+        transaction.addToBackStack(null);
+        // フラグメントトランザクションをコミット
+        transaction.commit();
+    }
+
 }

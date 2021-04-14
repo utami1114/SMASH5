@@ -12,14 +12,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.smash4.MainActivity;
 import com.example.smash4.MyItemRecyclerViewAdapter;
 import com.example.smash4.R;
 import com.example.smash4.dummy.DummyContent;
+
+
+
 
 /**
  * A fragment representing a list of Items.
  */
 public class HistoryFragment extends Fragment {
+
 
     // TODO: Customize parameter argument names
     private static final String ARG_COLUMN_COUNT = "column-count";
@@ -50,12 +55,16 @@ public class HistoryFragment extends Fragment {
         if (getArguments() != null) {
             mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
         }
+
+        // 所属している親アクティビティを取得
+        MainActivity activity = (MainActivity) getActivity();
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_item_list, container, false);
+        View view = inflater.inflate(R.layout.fragment_history, container, false);
 
         // Set the adapter
         if (view instanceof RecyclerView) {

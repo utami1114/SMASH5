@@ -7,16 +7,7 @@
     android:layout_height="match_parent"
     android:paddingTop="?attr/actionBarSize">
 
-    <fragment
-        android:id="@+id/nav_fragment"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:defaultNavHost="true"
-        app:layout_constraintBottom_toBottomOf="@id/nav_view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -31,15 +22,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.997"
         app:menu="@menu/bottom_nav_menu" />
-
-    <FrameLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/activityMain"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
-
-    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

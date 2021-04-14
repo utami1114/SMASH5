@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.smash4.MainActivity;
 import com.example.smash4.R;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
@@ -28,6 +29,12 @@ public class CameraFragment extends Fragment  {
     public View onCreateView( LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_camera, container, false);
+
+
+        // 所属している親アクティビティを取得
+        MainActivity activity = (MainActivity) getActivity();
+
+
 //3/29.31paste
         Button cameraButton = (Button)v. findViewById (R.id.cameraButton);
         cameraButton.setOnClickListener(new View.OnClickListener() {

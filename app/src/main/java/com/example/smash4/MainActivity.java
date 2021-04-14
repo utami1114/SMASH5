@@ -23,6 +23,10 @@ import com.google.zxing.integration.android.IntentResult;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Fragment fragment;
+    private FragmentManager fragmentManager;
+
+
 
 
     @Override
@@ -36,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_camera, R.id.navigation_history, R.id.navigation_map, R.id.navigation_menu)
                 .build();
+
+
     }
 
         private void addFragment(Fragment fragment) {
@@ -44,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             // フラグメントトランザクションの開始
             FragmentTransaction transaction = manager.beginTransaction();
             // MainFragmentを追加
-            transaction.add(R.id.activityMain,fragment);
+            transaction.add(R.id.navigation_camera,fragment);
             // フラグメントトランザクションのコミット。コミットすることでFragmentの状態が反映される
             transaction.commit();
         }
