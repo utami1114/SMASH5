@@ -2,17 +2,15 @@ package com.example.smash4.ui.history;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-import com.example.smash4.MainActivity;
 import com.example.smash4.MyItemRecyclerViewAdapter;
 import com.example.smash4.R;
 import com.example.smash4.dummy.DummyContent;
@@ -55,9 +53,6 @@ public class HistoryFragment extends Fragment {
         if (getArguments() != null) {
             mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
         }
-
-        // 所属している親アクティビティを取得
-        MainActivity activity = (MainActivity) getActivity();
 
     }
 

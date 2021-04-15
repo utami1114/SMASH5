@@ -1,20 +1,16 @@
 package com.example.smash4;
 
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
 
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
-
-import com.example.smash4.ui.menu.MenuViewModel;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -22,13 +18,22 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+
 public class MapFragment extends Fragment {
 
+    MapFragment mf;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         MainActivity activity = (MainActivity) getActivity();
+
+        mf= MapFragment.newInstance();
+
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.add(android.R.id.content, mf);
+        ft.commit();
     }
 
     private OnMapReadyCallback callback = new OnMapReadyCallback() {
@@ -69,18 +74,6 @@ public class MapFragment extends Fragment {
     }
 
 
-    // 表示させるFragmentを切り替えるメソッドを定義（表示したいFragmentを引数として渡す）
-    private void replaceFragment(Fragment fragment) {
-        // フラグメントマネージャーの取得
-        FragmentManager manager = getFragmentManager(); // アクティビティではgetSupportFragmentManager()?
-        // フラグメントトランザクションの開始
-        FragmentTransaction transaction = manager.beginTransaction();
-        // レイアウトをfragmentに置き換え（追加）
-        transaction.replace(R.id.navigation_camera, fragment);
-        // 置き換えのトランザクションをバックスタックに保存する
-        transaction.addToBackStack(null);
-        // フラグメントトランザクションをコミット
-        transaction.commit();
+
     }
 
-}

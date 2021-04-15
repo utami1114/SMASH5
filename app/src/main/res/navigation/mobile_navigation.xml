@@ -10,9 +10,9 @@
         android:name="com.example.smash4.ui.camera.CameraFragment"
         android:label="@string/camera"
         tools:layout="@layout/fragment_camera" >
-        <action
+       <!-- <action
             android:id="@+id/action_navigation_camera_to_resultFragment2"
-            app:destination="@id/resultFragment2" />
+            app:destination="@id/resultFragment2" />-->
     </fragment>
 
     <fragment
@@ -31,7 +31,7 @@
         android:name="com.example.smash4.MapFragment"
         android:label="Map"
         tools:layout="@layout/fragment_map" />
-    <fragment
+    <!--<fragment
         android:id="@+id/resultFragment2"
         android:name="com.example.smash4.ui.result.resultFragment"
         android:label="result_fragment"
@@ -40,6 +40,5 @@
         android:id="@+id/itemFragment"
         android:name="com.example.smash4.ui.history.HistoryFragment"
         android:label="fragment_item_list"
-        tools:layout="@layout/fragment_history" />
-
+        tools:layout="@layout/fragment_history" />-->
 </navigation>

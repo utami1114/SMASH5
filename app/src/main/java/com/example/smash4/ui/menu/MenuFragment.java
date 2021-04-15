@@ -12,7 +12,6 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.smash4.MainActivity;
 import com.example.smash4.R;
 
 public class MenuFragment extends Fragment {
@@ -31,8 +30,6 @@ public class MenuFragment extends Fragment {
                 textView.setText(s);
             }
 
-            // 所属している親アクティビティを取得
-            MainActivity activity = (MainActivity) getActivity();
         });
         return root;
 
