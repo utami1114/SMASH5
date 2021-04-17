@@ -55,7 +55,7 @@ public class CameraFragment extends Fragment  {
 
     */
 
-    return root;
+    return v;
 
     }
 

@@ -9,28 +9,36 @@
         android:id="@+id/navigation_camera"
         android:name="com.example.smash4.ui.camera.CameraFragment"
         android:label="@string/camera"
-        tools:layout="@layout/fragment_camera" >
-       <!-- <action
-            android:id="@+id/action_navigation_camera_to_resultFragment2"
-            app:destination="@id/resultFragment2" />-->
-    </fragment>
+        tools:layout="@layout/fragment_camera"/>
+
+
 
     <fragment
         android:id="@+id/navigation_history"
         android:name="com.example.smash4.ui.history.HistoryFragment"
         android:label="@string/history"
-        tools:layout="@layout/fragment_history" />
+        tools:layout="@layout/fragment_history"/>
+
+
 
     <fragment
         android:id="@+id/navigation_menu"
         android:name="com.example.smash4.ui.menu.MenuFragment"
         android:label="@string/menu"
         tools:layout="@layout/fragment_menu" />
+
     <fragment
         android:id="@+id/navigation_map"
         android:name="com.example.smash4.LocationFragment"
-        android:label="Map"
+        android:label="@string/map"
         tools:layout="@layout/fragment_map" />
+
+
+  <!--  <fragment
+        android:id="@+id/navigation_history"
+        android:name="com.example.smash4.ui.history.HistoryFragment"
+        android:label="@string/history"
+        tools:layout="@layout/fragment_history" />-->
     <!--<fragment
         android:id="@+id/resultFragment2"
         android:name="com.example.smash4.ui.result.resultFragment"
