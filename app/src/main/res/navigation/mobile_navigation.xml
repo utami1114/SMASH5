@@ -28,7 +28,7 @@
         tools:layout="@layout/fragment_menu" />
     <fragment
         android:id="@+id/navigation_map"
-        android:name="com.example.smash4.MapFragment"
+        android:name="com.example.smash4.LocationFragment"
         android:label="Map"
         tools:layout="@layout/fragment_map" />
     <!--<fragment

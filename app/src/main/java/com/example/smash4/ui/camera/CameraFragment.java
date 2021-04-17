@@ -32,14 +32,16 @@ public class CameraFragment extends Fragment  {
         Button cameraButton = (Button)v. findViewById (R.id.cameraButton);
         cameraButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+
                 //コピペした　3/25
+
                 IntentIntegrator integrator= IntentIntegrator.forSupportFragment(CameraFragment.this);
                 integrator.initiateScan();
 
             }
         });
         homeViewModel =
-                new ViewModelProvider(this).get(CameraViewModel.class);
+              new ViewModelProvider(this).get(CameraViewModel.class);
         View root = inflater.inflate(R.layout.fragment_camera, container, false);
     /*
 

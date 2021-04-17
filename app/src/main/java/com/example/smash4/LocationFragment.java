@@ -11,15 +11,17 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+
+
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.MapFragment;
 
-
-public class MapFragment extends Fragment {
+public class LocationFragment extends Fragment {
 
     MapFragment mf;
 
@@ -32,7 +34,7 @@ public class MapFragment extends Fragment {
 
         FragmentManager fm = getFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
-        ft.add(android.R.id.content, mf);
+        //ft.add(android.R.id.content, mf);
         ft.commit();
     }
 
