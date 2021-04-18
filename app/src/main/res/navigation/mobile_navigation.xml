@@ -22,7 +22,7 @@
 
 
     <fragment
-        android:id="@+id/navigation_menu"
+        android:id="@+id/navigation_calculation"
         android:name="com.example.smash4.ui.menu.MenuFragment"
         android:label="@string/menu"
         tools:layout="@layout/fragment_menu" />

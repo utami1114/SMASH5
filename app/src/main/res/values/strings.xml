@@ -18,5 +18,6 @@
     <string name="thistime">Input the amount used this time</string>
     <string name="clear">CLEAR</string>
     <string name="onButton">onButton</string>
+    <string name="calculation">Calcuation</string>
 
 </resources>
