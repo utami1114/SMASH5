@@ -12,5 +12,11 @@
     <string name="map">Map</string>
     <string name="explain">SMASH4\n</string>
     <string name="シェア">SHARE</string>
+    <string name="add">ADD</string>
+    <string name="answer">Answer</string>
+    <string name="past">Input the amount spent in the past</string>
+    <string name="thistime">Input the amount used this time</string>
+    <string name="clear">CLEAR</string>
+    <string name="onButton">onButton</string>
 
 </resources>
