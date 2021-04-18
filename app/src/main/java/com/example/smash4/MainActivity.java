@@ -39,22 +39,23 @@ private Button shareButton;
         NavigationUI.setupActionBarWithNavController(this,navController,appBarConfiguration);
         NavigationUI.setupWithNavController(navView,navController);
 
+        shareButton =(Button)  findViewById (R.id.shareButton);
 
-    }
-    shareButton =(Button)  findViewById (R.id.shareButton);
+        shareButton.setOnClickListener(new View.OnClickListener() {
+                                           @Override
+                                           public void onClick (View v){
 
-        shareButton.setOnClickListener(new view.OnClickListener() {
-            @Override
-        public void onClick (View v)
-
-        Intent i = new Intent(Intent.ACTION_SEND);
+                                           Intent i = new Intent(Intent.ACTION_SEND);
         i.setType("text/plain");
         i.putExtra(Intent.EXTRA_TEXT, "シェアしたいURL");
-        startActivity(Intent.createChooser(i, "ダイアログのタイトル"));
+                                           startActivity(Intent.createChooser(i, "ダイアログのタイトル"));
 
 
-        }
     }
+
+
+
+    });}}
 
 
 

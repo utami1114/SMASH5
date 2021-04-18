@@ -20,11 +20,13 @@ public class CameraFragment extends Fragment  {
     private CameraViewModel homeViewModel;
 
 
+
     //3/31paste
 @Override
     public View onCreateView( LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_camera, container, false);
+
 
 
 
@@ -66,6 +68,9 @@ public class CameraFragment extends Fragment  {
     //コピペした 3/25
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+
+
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         if (result != null) {
             Log.d("readQR", result.getContents());

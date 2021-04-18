@@ -6,24 +6,42 @@
     android:layout_height="match_parent"
     tools:context=".ui.menu.MenuFragment">
 
-    <FrameLayout
-        android:id="@+id/MenuFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MenuFragment"/>
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:orientation="vertical"
+         tools:context=".MenuFragment">
 
-    <TextView
-        android:id="@+id/text_notifications"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/explain"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+         <EditText
+             android:id="@+id/eT1"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:hint="input a number(1)"/>
+         <EditText
+             android:id="@+id/eT2"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:hint="input a number(2)"/>
+
+         <Button
+             android:id="@+id/addButton"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:onClick="onButton"
+             android:text="click" />
+
+         <TextView
+             android:id="@+id/tvAns"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="Answer"
+             android:textSize="36sp" />
+
+         <Button
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:onClick="onClear"
+             android:text="clear" />
+
+     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
