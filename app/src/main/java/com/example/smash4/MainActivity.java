@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Fragment fragment;
     private FragmentManager fragmentManager;
-
+private Button shareButton;
 
 
 
@@ -41,9 +41,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    Button shareButton = (Button)v. findViewById (R.id.shareButton);
-        shareButton.setOnClickListener(new View.OnClickListener() {
-        public void onClick (View view)
+    shareButton =(Button)  findViewById (R.id.shareButton);
+
+        shareButton.setOnClickListener(new view.OnClickListener() {
+            @Override
+        public void onClick (View v)
 
         Intent i = new Intent(Intent.ACTION_SEND);
         i.setType("text/plain");
