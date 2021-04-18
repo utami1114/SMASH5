@@ -51,8 +51,6 @@ private Button shareButton;
         i.setType("text/plain");
         i.putExtra(Intent.EXTRA_TEXT, "シェアしたいURL");
                                            startActivity(Intent.createChooser(i, "ダイアログのタイトル"));
-
-
     }
 
 

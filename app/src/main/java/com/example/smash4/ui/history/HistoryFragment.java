@@ -32,7 +32,7 @@ public class HistoryFragment extends Fragment {
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
-     */
+
     public HistoryFragment() {
     }
 
@@ -45,14 +45,14 @@ public class HistoryFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         if (getArguments() != null) {
             mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
-        }
+     }
 
     }
 
@@ -74,4 +74,6 @@ public class HistoryFragment extends Fragment {
         }
         return view;
     }
+
+
 }

@@ -1,5 +1,6 @@
 package com.example.smash4;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,10 +22,18 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 
 
-
 public class LocationFragment extends Fragment {
 
     MapFragment mf;
+
+
+    private final static int PERMISSION_REQUEST_CODE = 1;
+    private final static int PERMISSION_GPS_CODE = 1001;
+
+    public static Uri launchUrl;
+   // private SamplesApplication setGPS;
+
+
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -40,6 +49,10 @@ public class LocationFragment extends Fragment {
         FragmentTransaction ft = fm.beginTransaction();
         //ft.add(R.id.content, mf);
         ft.commit();
+
+
+
+
     }
 
     private OnMapReadyCallback callback = new OnMapReadyCallback() {
@@ -67,6 +80,8 @@ public class LocationFragment extends Fragment {
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_map, container, false);
+
+
     }
 
     @Override
