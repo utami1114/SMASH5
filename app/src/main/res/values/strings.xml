@@ -19,5 +19,6 @@
     <string name="clear">CLEAR</string>
     <string name="onButton">onButton</string>
     <string name="calculation">Calcuation</string>
+    <string name="receipt">receipt</string>
 
 </resources>
