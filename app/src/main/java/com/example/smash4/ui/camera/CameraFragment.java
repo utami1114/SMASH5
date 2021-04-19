@@ -44,7 +44,7 @@ public class CameraFragment extends Fragment  {
         });
         homeViewModel =
               new ViewModelProvider(this).get(CameraViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_camera, container, false);
+
 
 
     return v;
@@ -63,7 +63,7 @@ public class CameraFragment extends Fragment  {
 
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         if (result != null) {
-            Log.d("readQR", result.getContents());
+
         } else {
             super.onActivityResult(requestCode, resultCode, data);
         }
