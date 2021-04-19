@@ -21,7 +21,7 @@ public class CameraFragment extends Fragment  {
 
 
 
-    //3/31paste
+
 @Override
     public View onCreateView( LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -30,12 +30,12 @@ public class CameraFragment extends Fragment  {
 
 
 
-//3/29.31paste
+
         Button cameraButton = (Button)v. findViewById (R.id.cameraButton);
         cameraButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                //コピペした　3/25
+
 
                 IntentIntegrator integrator= IntentIntegrator.forSupportFragment(CameraFragment.this);
                 integrator.initiateScan();
@@ -45,17 +45,7 @@ public class CameraFragment extends Fragment  {
         homeViewModel =
               new ViewModelProvider(this).get(CameraViewModel.class);
         View root = inflater.inflate(R.layout.fragment_camera, container, false);
-    /*
 
-    4/9 final TextView textView = root.findViewById(R.id.text_home);
-    homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-     @Override
-     public void onChanged(@Nullable String s) {
-       textView.setText(s);
-     }
-    }) ;
-
-    */
 
     return v;
 
@@ -65,7 +55,7 @@ public class CameraFragment extends Fragment  {
 
 
 
-    //コピペした 3/25
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
 

@@ -23,38 +23,20 @@ import com.example.smash4.dummy.DummyContent;
 
 
 
-/**
- * A fragment representing a list of Items.
- */
+
 public class HistoryFragment extends Fragment {
 
     private Button shareButton1;
 private EditText editTextTextPersonName;
     private EditText editTextTextPersonName3;
-    private Button saveButton;
+
 
     // TODO: Customize parameter argument names
     private static final String ARG_COLUMN_COUNT = "column-count";
     // TODO: Customize parameters
     private int mColumnCount = 1;
 
-    /**
-     * Mandatory empty constructor for the fragment manager to instantiate the
-     * fragment (e.g. upon screen orientation changes).
 
-    public HistoryFragment() {
-    }
-
-    // TODO: Customize parameter initialization
-    @SuppressWarnings("unused")
-    public static HistoryFragment newInstance(int columnCount) {
-        HistoryFragment fragment = new HistoryFragment();
-        Bundle args = new Bundle();
-        args.putInt(ARG_COLUMN_COUNT, columnCount);
-        fragment.setArguments(args);
-        return fragment;
-    }
-     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
